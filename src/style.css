@@ -1,0 +1,64 @@
+*::after, *::before{
+    box-sizing: border-box;
+   
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right , #001Aff, #00FF6C);
+    overflow-x: hidden;
+}
+body::-webkit-scrollbar, body::-webkit-scrollbar-track{
+    appearance: none;
+    scroll-behavior: smooth;
+}
+
+
+.calculatorGrid{
+    display: grid;
+    margin-top: 2rem;
+    grid-template-columns:  repeat(4, 6rem);
+    grid-template-rows: minmax( 7rem, auto ) repeat(5, 6rem);
+ word-wrap: break-word;
+}
+.span-two{
+    grid-column: span 2;
+}
+.output{
+    grid-column: 1 /-1  ;
+    background-color: rgba(0,0,0, .75);
+    height: auto;
+    padding: 20px;
+    text-align: right;   
+   
+    max-width: 400px;
+}
+.previouse-Operand{
+    color: rgba(255,255,255,0.5);
+    font-size: 1.5rem;
+    max-width: 400px;
+
+}
+.next-Operand{
+    font-size: 2.5rem;
+    color: white;
+    margin-top: 10px;
+    max-width: 400px;
+
+}
+button{
+    background-color: rgb(11, 90, 90);
+    color: white;
+    font-size: 1.5rem;
+    border: 0.1px solid gray;
+    cursor: pointer;
+    transform: scale(1);
+}
+button:hover{
+    background-color: rgba(11, 90, 90, 0.75);
+}
+button:active{
+    background-color: rgba(11, 90, 90, 0.5);
+  color: black;
+}
